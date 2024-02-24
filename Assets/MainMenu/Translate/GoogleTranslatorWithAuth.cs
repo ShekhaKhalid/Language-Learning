@@ -29,6 +29,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         // Add an event listener to the translateButton that will call the OnTranslateButtonClick method when clicked.
         translateButton.onClick.AddListener(OnTranslateButtonClick);
     }
+      
 
     // This method is called when the translateButton is clicked.
     private void OnTranslateButtonClick()
@@ -40,7 +41,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         if (!string.IsNullOrEmpty(sourceText))
         {
             // Call the TranslateText method to translate the sourceText from Arabic ("ar") to English ("en").
-            TranslateText("ar", "en", sourceText, (success, translatedText) =>
+            TranslateText("ar", "ko", sourceText, (success, translatedText) =>
             {
                 // If the translation is successful, update the translatedTextMeshPro with the translated text.
                 if (success)
