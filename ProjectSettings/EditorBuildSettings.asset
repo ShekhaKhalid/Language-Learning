@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Shekha Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/static cov.unity
+    guid: 548b6bc93c8bf8d4590ec26479001662
+  - enabled: 1
+    path: Assets/Scenes/main menu.unity
+    guid: 144ad69072d55b4459ae0a3782ee39f4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ea66b026b04fa3d44b14313f43165cef,
       type: 2}
