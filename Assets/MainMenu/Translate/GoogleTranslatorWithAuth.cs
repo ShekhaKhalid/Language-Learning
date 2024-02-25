@@ -41,7 +41,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         if (!string.IsNullOrEmpty(sourceText))
         {
             // Call the TranslateText method to translate the sourceText from Arabic ("ar") to English ("en").
-            TranslateText("ar", "ko", sourceText, (success, translatedText) =>
+            TranslateText("en", "ar", sourceText, (success, translatedText) =>
             {
                 // If the translation is successful, update the translatedTextMeshPro with the translated text.
                 if (success)
