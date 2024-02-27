@@ -22,12 +22,10 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     
 
-    // This method is called when the script is first initialized.
     private void Start()
     {
-        // Add an event listener to the translateButton that will call the OnTranslateButtonClick method when clicked.
+   
         translateButton.onClick.AddListener(OnTranslateButtonClick);
-
 
     }
 
