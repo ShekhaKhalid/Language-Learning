@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Shekha Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: b0076f4043f4a3e4292862fc23aea3f2
+  - enabled: 1
     path: Assets/Scenes/main menu.unity
     guid: 144ad69072d55b4459ae0a3782ee39f4
   - enabled: 1

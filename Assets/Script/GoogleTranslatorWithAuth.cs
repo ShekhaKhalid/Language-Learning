@@ -11,25 +11,56 @@ using UnityEngine.UI;
 // This class is responsible for translating text from one language to another using the Google Translation API.
 public class GoogleTranslatorWithAuth : MonoBehaviour
 {
-    // Google API Key for authentication.
+
     private const string APIKey = "AIzaSyDdoNXBMW6F69h0Bg4hgpBO7FKng4HJ9mQ";
 
-    // Reference to the TextMeshProUGUI component to display the translated text.
     public TextMeshProUGUI translatedTextMeshPro;
 
-    // Reference to the TMP_InputField component to get the input text.
     public TMP_InputField inputField;
 
-    // Reference to the Button component to trigger the translation process.
     public Button translateButton;
+
+    
 
     // This method is called when the script is first initialized.
     private void Start()
     {
         // Add an event listener to the translateButton that will call the OnTranslateButtonClick method when clicked.
         translateButton.onClick.AddListener(OnTranslateButtonClick);
+
+
     }
-      
+
+
+    /*    // This method is called when the translateButton is clicked.
+        private void OnTranslateButtonClick()
+        {
+            // Get the source text from the inputField.
+            string sourceText = inputField.text;
+
+            string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
+            Debug.Log(selectedLanguage);
+
+            // Check if the sourceText is not empty or null.
+            if (!string.IsNullOrEmpty(sourceText))
+            {
+
+                // Call the TranslateText method to translate the sourceText from Arabic ("ar") to English ("en").
+                TranslateText("en", "ar", sourceText, (success, translatedText) =>
+                {
+                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                    if (success)
+                    {
+                        // Optional: Print the translated text to the console.
+                        Debug.Log(translatedText);
+
+                        // Update the TextMeshPro component's text with the translated text.
+                        translatedTextMeshPro.text = translatedText;
+                    }
+                });
+            }
+        }*/
+
 
     // This method is called when the translateButton is clicked.
     private void OnTranslateButtonClick()
@@ -40,21 +71,60 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         // Check if the sourceText is not empty or null.
         if (!string.IsNullOrEmpty(sourceText))
         {
-            // Call the TranslateText method to translate the sourceText from Arabic ("ar") to English ("en").
-            TranslateText("en", "ar", sourceText, (success, translatedText) =>
-            {
-                // If the translation is successful, update the translatedTextMeshPro with the translated text.
-                if (success)
-                {
-                    // Optional: Print the translated text to the console.
-                    Debug.Log(translatedText);
+            // Get the selected language from PlayerPrefs.
+            string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
 
-                    // Update the TextMeshPro component's text with the translated text.
-                    translatedTextMeshPro.text = translatedText;
-                }
-            });
+            if (selectedLanguage == "Arabic")
+            {
+                TranslateText("en", "ar", sourceText, (success, translatedText) =>
+                {
+                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                    if (success)
+                    {
+                        // Optional: Print the translated text to the console.
+                        Debug.Log(translatedText);
+
+                        // Update the TextMeshPro component's text with the translated text.
+                        translatedTextMeshPro.text = translatedText;
+                    }
+                });
+            }
+            else if(selectedLanguage== "French")
+            {
+                TranslateText("en", "fr", sourceText, (success, translatedText) =>
+                {
+                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                    if (success)
+                    {
+                        // Optional: Print the translated text to the console.
+                        Debug.Log(translatedText);
+
+                        // Update the TextMeshPro component's text with the translated text.
+                        translatedTextMeshPro.text = translatedText;
+                    }
+                });
+            }
+            else
+            {
+                TranslateText("en", "en", sourceText, (success, translatedText) =>
+                {
+                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                    if (success)
+                    {
+                        // Optional: Print the translated text to the console.
+                        Debug.Log(translatedText);
+
+                        // Update the TextMeshPro component's text with the translated text.
+                        translatedTextMeshPro.text = translatedText;
+                    }
+                });
+            }
+          
         }
     }
+
+
+
 
     // This method translates the sourceText from the sourceLanguage to the targetLanguage.
     public void TranslateText(string sourceLanguage, string targetLanguage, string sourceText, Action<bool, string> callback)
@@ -106,5 +176,6 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         callback.Invoke(true, translatedText);
     }
 }
+
 
 
