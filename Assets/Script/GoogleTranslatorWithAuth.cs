@@ -20,12 +20,22 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     public Button translateButton;
 
-    
+    public TextMeshProUGUI English;
+
+    public TextMeshProUGUI Arabic;
+
+    public TextMeshProUGUI French;
+
+
 
     private void Start()
     {
    
         translateButton.onClick.AddListener(OnTranslateButtonClick);
+
+        English.gameObject.SetActive(false);
+        Arabic.gameObject.SetActive(false);
+        French.gameObject.SetActive(false);
 
     }
 
@@ -57,8 +67,87 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
                     }
                 });
             }
-        }*/
+        }*//*
 
+
+    // This method is called when the translateButton is clicked.
+    *//*    private void OnTranslateButtonClick()
+        {
+            // Get the source text from the inputField.
+            string sourceText = inputField.text;
+
+            // Check if the sourceText is not empty or null.
+            if (!string.IsNullOrEmpty(sourceText))
+            {
+                // Get the selected language from PlayerPrefs.
+                string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
+
+                Debug.Log(selectedLanguage);
+
+
+                if (selectedLanguage == "Arabic")
+                {
+
+                    TranslateText("en", "ar", sourceText, (success, translatedText) =>
+                    {
+                        // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                        if (success)
+                        {
+                            // Optional: Print the translated text to the console.
+                            Debug.Log(translatedText);
+
+                            // Update the TextMeshPro component's text with the translated text.
+                            translatedTextMeshPro.text = translatedText;
+                        }
+                    });
+
+
+             *//*       Arabic.gameObject.SetActive(true);*//*
+
+                }
+                else if(selectedLanguage== "French")
+                {
+                    TranslateText("en", "fr", sourceText, (success, translatedText) =>
+                    {
+                        // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                        if (success)
+                        {
+                            // Optional: Print the translated text to the console.
+                            Debug.Log(translatedText);
+
+                            // Update the TextMeshPro component's text with the translated text.
+                            translatedTextMeshPro.text = translatedText;
+                        }
+                    });
+
+
+            *//*        French.gameObject.SetActive(true);*//*
+                }
+                else
+                {
+                    TranslateText("en", "en", sourceText, (success, translatedText) =>
+                    {
+                        // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                        if (success)
+                        {
+                            // Optional: Print the translated text to the console.
+                            Debug.Log(translatedText);
+
+                            // Update the TextMeshPro component's text with the translated text.
+                            translatedTextMeshPro.text = translatedText;
+                        }
+                    });
+
+                 *//*   English.gameObject.SetActive(true);*//*
+
+                }
+
+            }
+        }
+
+    */
+
+  
 
     // This method is called when the translateButton is clicked.
     private void OnTranslateButtonClick()
@@ -71,55 +160,50 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         {
             // Get the selected language from PlayerPrefs.
             string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
-
-            if (selectedLanguage == "Arabic")
+            Debug.Log(selectedLanguage);
+            // Assign the target language based on the selected language.
+            string targetLanguage;
+            switch (selectedLanguage)
             {
-                TranslateText("en", "ar", sourceText, (success, translatedText) =>
-                {
-                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
-                    if (success)
-                    {
-                        // Optional: Print the translated text to the console.
-                        Debug.Log(translatedText);
-
-                        // Update the TextMeshPro component's text with the translated text.
-                        translatedTextMeshPro.text = translatedText;
-                    }
-                });
+                case "English":
+                    targetLanguage = "en";
+                    break;
+                case "French":
+                    targetLanguage = "fr";
+                    break;
+                case "Arabic":
+                    targetLanguage = "ar";
+                    break;
+                case "Korean":
+                    targetLanguage = "ko";
+                    break;
+                default:
+                    targetLanguage = "en"; // Default to English if language is not recognized.
+                    break;
             }
-            else if(selectedLanguage== "French")
+            print(targetLanguage);
+            // Call the TranslateText method to translate the sourceText to the selected language.
+            TranslateText("en", targetLanguage, sourceText, (success, translatedText) =>
             {
-                TranslateText("en", "fr", sourceText, (success, translatedText) =>
+                // If the translation is successful, update the translatedTextMeshPro with the translated text.
+                if (success)
                 {
-                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
-                    if (success)
-                    {
-                        // Optional: Print the translated text to the console.
-                        Debug.Log(translatedText);
-
-                        // Update the TextMeshPro component's text with the translated text.
-                        translatedTextMeshPro.text = translatedText;
-                    }
-                });
-            }
-            else
-            {
-                TranslateText("en", "en", sourceText, (success, translatedText) =>
-                {
-                    // If the translation is successful, update the translatedTextMeshPro with the translated text.
-                    if (success)
-                    {
-                        // Optional: Print the translated text to the console.
-                        Debug.Log(translatedText);
-
-                        // Update the TextMeshPro component's text with the translated text.
-                        translatedTextMeshPro.text = translatedText;
-                    }
-                });
-            }
-          
+                    // Optional: Print the translated text to the console.
+                    Debug.Log(translatedText);
+                   
+                    // Update the TextMeshPro component's text with the translated text.
+                    translatedTextMeshPro.text = translatedText;
+                }
+            });
         }
     }
+
+
+
+
+
+
+
 
 
 

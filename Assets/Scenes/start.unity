@@ -8119,9 +8119,11 @@ MonoBehaviour:
     m_Options:
     - m_Text: English
       m_Image: {fileID: 0}
-    - m_Text: 'French  '
+    - m_Text: French
       m_Image: {fileID: 0}
     - m_Text: Arabic
+      m_Image: {fileID: 0}
+    - m_Text: Korean
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
