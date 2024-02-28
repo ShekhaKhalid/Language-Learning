@@ -6,10 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Convai/Scenes/Convai Demo - VR.unity
+    guid: eda28d2f4fd11e84893a8d05344d7424
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: ada3aa36b63a69444b652a9308ae79ad
+  - enabled: 1
     path: Assets/Scenes/Shekha Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Homepage.unity
+    guid: 5b56972a07104a24fa20ebfe9c522575
+  - enabled: 1
+    path: Assets/Scenes/Coffe.unity
+    guid: 1667729643db49b4eb3fb7169a7b64e5
+  - enabled: 1
+    path: Assets/Scenes/Airport.unity
+    guid: d850688f8e75ad0429e9ecc239bd7f8f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 72a00f07b496ab0409dd1930edffb933,
       type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: acde8672019937c4aa37ab218a165e91,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7a7970b4603a5a94e829affc5f0c9008,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9cfb797f7b487ed48bc018b3aa66b3cd,
       type: 2}
