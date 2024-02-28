@@ -7,6 +7,7 @@ public class MainMenuButton : MonoBehaviour
 {
     public Canvas MainMene;
     public Canvas translete;
+    public Canvas instructions;
 
     private void Start()
     {
@@ -15,6 +16,7 @@ public class MainMenuButton : MonoBehaviour
     }
     public void ShowMenu()
     {
+
         MainMene.gameObject.SetActive(true);
     }
 
@@ -42,5 +44,15 @@ public class MainMenuButton : MonoBehaviour
         MainMene.gameObject.SetActive(true);
     }
 
+    public void ShowInstructions()
+    {
+        MainMene.gameObject.SetActive(false);
+        instructions.gameObject.SetActive(true);
+    }
 
+    public void HideInstructions()
+    {
+        MainMene.gameObject.SetActive(true);
+        instructions.gameObject.SetActive(false);
+    }
 }
