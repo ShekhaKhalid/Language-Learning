@@ -1303,7 +1303,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: English
       m_Image: {fileID: 0}
-    - m_Text: Franch
+    - m_Text: French
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2322,6 +2322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropdown: {fileID: 1962273254}
+  dropdown2: {fileID: 176259895}
 --- !u!1 &550228752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2686,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658700182}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &658700184
 Camera:
   m_ObjectHideFlags: 0
