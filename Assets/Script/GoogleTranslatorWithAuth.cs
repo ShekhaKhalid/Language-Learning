@@ -206,7 +206,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
             print(targetLanguage);
             print(sourceLanguage);
             // Call the TranslateText method to translate the sourceText to the selected language.
-            TranslateText("en", targetLanguage, sourceText, (success, translatedText) =>
+            TranslateText(sourceLanguage, targetLanguage, sourceText, (success, translatedText) =>
             {
                 // If the translation is successful, update the translatedTextMeshPro with the translated text.
                 if (success)
