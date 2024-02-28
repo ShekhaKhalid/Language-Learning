@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,7 +10,8 @@ public class SelectLanguage : MonoBehaviour
 
     void Start()
     {
-        dropdown.onValueChanged.AddListener(delegate {
+        dropdown.onValueChanged.AddListener(delegate
+        {
             OnDropdownValueChanged(dropdown);
         });
 
@@ -27,8 +28,8 @@ public class SelectLanguage : MonoBehaviour
         SceneManager.LoadScene("main menu");
     }
 }
-*/
 
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,10 +47,10 @@ public class SelectLanguage : MonoBehaviour
             OnDropdownValueChanged(dropdown);
         });
 
-        // Subscribe to the onValueChanged event of the new dropdown
+*//*        // Subscribe to the onValueChanged event of the new dropdown
         dropdown2.onValueChanged.AddListener(delegate {
             OnDropdown2ValueChanged(dropdown2);
-        });
+        });*//*
     }
 
     void OnDropdownValueChanged(TMP_Dropdown dropdown)
@@ -58,7 +59,7 @@ public class SelectLanguage : MonoBehaviour
         PlayerPrefs.SetString("selectedLanguage", selectedLanguage);
     }
 
-    void OnDropdown2ValueChanged(TMP_Dropdown dropdown)
+    void OnDropdown2ValueChanged(TMP_Dropdown dropdown2)
     {
         string selectedLanguage2 = dropdown2.options[dropdown2.value].text;
         PlayerPrefs.SetString("selectedLanguage2", selectedLanguage2);
@@ -69,3 +70,4 @@ public class SelectLanguage : MonoBehaviour
         SceneManager.LoadScene("main menu");
     }
 }
+*/
