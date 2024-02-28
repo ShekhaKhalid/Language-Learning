@@ -20,11 +20,9 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     public Button translateButton;
 
-    public TextMeshProUGUI English;
+        public TextMeshProUGUI Arabic;
 
-    public TextMeshProUGUI Arabic;
-
-    public TextMeshProUGUI French;
+  
 
 
 
@@ -33,9 +31,9 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
    
         translateButton.onClick.AddListener(OnTranslateButtonClick);
 
-        English.gameObject.SetActive(false);
+
         Arabic.gameObject.SetActive(false);
-        French.gameObject.SetActive(false);
+    
 
     }
 
@@ -160,7 +158,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         {
             // Get the selected language from PlayerPrefs.
             string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
-    /*        string selectedLanguage2 = PlayerPrefs.GetString("selectedLanguage2", "English");*/
+            string selectedLanguage2 = PlayerPrefs.GetString("selectedLanguage2", "English");
             Debug.Log(selectedLanguage);
 
             string targetLanguage;
@@ -185,7 +183,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
 
             string sourceLanguage;
-/*            switch (selectedLanguage2)
+            switch (selectedLanguage2)
             {
                 case "English":
                     sourceLanguage = "en";
@@ -196,13 +194,13 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
                 default:
                     sourceLanguage = "en"; // Default to English if language is not recognized.
                     break;
-            }*/
+            }
 
 
             print(targetLanguage);
-      /*      print(sourceLanguage);*/
+            print(sourceLanguage);
             // Call the TranslateText method to translate the sourceText to the selected language.
-            TranslateText("fr", targetLanguage, sourceText, (success, translatedText) =>
+            TranslateText("en", targetLanguage, sourceText, (success, translatedText) =>
             {
                 // If the translation is successful, update the translatedTextMeshPro with the translated text.
                 if (success)

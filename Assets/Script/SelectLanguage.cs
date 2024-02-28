@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,8 +28,8 @@ public class SelectLanguage : MonoBehaviour
         SceneManager.LoadScene("main menu");
     }
 }
+*/
 
-/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -47,10 +47,10 @@ public class SelectLanguage : MonoBehaviour
             OnDropdownValueChanged(dropdown);
         });
 
-*//*        // Subscribe to the onValueChanged event of the new dropdown
+        // Subscribe to the onValueChanged event of the new dropdown
         dropdown2.onValueChanged.AddListener(delegate {
             OnDropdown2ValueChanged(dropdown2);
-        });*//*
+        });
     }
 
     void OnDropdownValueChanged(TMP_Dropdown dropdown)
@@ -70,4 +70,3 @@ public class SelectLanguage : MonoBehaviour
         SceneManager.LoadScene("main menu");
     }
 }
-*/
