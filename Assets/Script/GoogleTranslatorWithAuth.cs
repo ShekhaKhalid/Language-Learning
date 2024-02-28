@@ -22,9 +22,6 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     public TextMeshProUGUI Arabic;
 
-  
-
-
 
     private void Start()
     {
@@ -38,16 +35,12 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
     }
 
 
- 
-  
-
     // This method is called when the translateButton is clicked.
     private void OnTranslateButtonClick()
     {
-        // Get the source text from the inputField.
+
         string sourceText = inputField.text;
 
-        // Check if the sourceText is not empty or null.
         if (!string.IsNullOrEmpty(sourceText))
         {
             // Get the selected language from PlayerPrefs.
@@ -93,16 +86,15 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
             print(targetLanguage);
             print(sourceLanguage);
-            // Call the TranslateText method to translate the sourceText to the selected language.
+        
+
+
             TranslateText("en", targetLanguage, sourceText, (success, translatedText) =>
             {
-                // If the translation is successful, update the translatedTextMeshPro with the translated text.
+              
                 if (success)
-                {
-                    // Optional: Print the translated text to the console.
-                    Debug.Log(translatedText);
-                   
-                    // Update the TextMeshPro component's text with the translated text.
+                {       
+                    Debug.Log(translatedText);               
                     translatedTextMeshPro.text = translatedText;
                 }
             });
