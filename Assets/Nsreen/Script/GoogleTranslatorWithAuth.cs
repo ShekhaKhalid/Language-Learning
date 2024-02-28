@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-// This class is responsible for translating text from one language to another using the Google Translation API.
+
 public class GoogleTranslatorWithAuth : MonoBehaviour
 {
 
@@ -20,7 +20,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     public Button translateButton;
 
-    public TextMeshProUGUI Arabic;
+   /* public TextMeshProUGUI Arabic;*/
 
 
     private void Start()
@@ -29,7 +29,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         translateButton.onClick.AddListener(OnTranslateButtonClick);
 
 
-        Arabic.gameObject.SetActive(false);
+   //     Arabic.gameObject.SetActive(false);
     
 
     }
@@ -89,13 +89,14 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         
 
 
-            TranslateText("en", targetLanguage, sourceText, (success, translatedText) =>
+            TranslateText(sourceLanguage, targetLanguage, sourceText, (success, translatedText) =>
             {
               
                 if (success)
                 {       
-                    Debug.Log(translatedText);               
+                    Debug.Log(translatedText);
                     translatedTextMeshPro.text = translatedText;
+                    /*   translatedTextMeshPro.GetComponent<ArabicFixerTMPRO>().fixedText = translatedText;*/
                 }
             });
         }
