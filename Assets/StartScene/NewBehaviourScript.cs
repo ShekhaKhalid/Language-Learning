@@ -21,7 +21,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void ShowInfo()
     {
-        info.SetActive(true);
-        info.SetActive(false);
+
     }
 }

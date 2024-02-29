@@ -26,3 +26,7 @@ public class SelectLearnLanguage : MonoBehaviour
         SceneManager.LoadScene("AItest");
     }
 }
+
+
+
+

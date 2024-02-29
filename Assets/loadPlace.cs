@@ -9,4 +9,8 @@ public class loadPlace : MonoBehaviour
     {
         SceneManager.LoadScene("Coffe");
     }
+    public void loadAirport()
+    {
+        SceneManager.LoadScene("Airport");
+    }
 }
