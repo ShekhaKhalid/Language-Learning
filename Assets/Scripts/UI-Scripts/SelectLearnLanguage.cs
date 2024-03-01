@@ -17,8 +17,9 @@ public class SelectLearnLanguage : MonoBehaviour
 
     void OnDropdownValueChanged(TMP_Dropdown dropdown)
     {
-        string selectedLanguage = dropdown.options[dropdown.value].text;
-        PlayerPrefs.SetString("LearningLang", selectedLanguage);
+        string selectedLanguageAI = dropdown.options[dropdown.value].text;
+        PlayerPrefs.SetString("LearningLang", selectedLanguageAI);
+        print(selectedLanguageAI);
     }
 
     public void LoadNextScene()
@@ -26,3 +27,7 @@ public class SelectLearnLanguage : MonoBehaviour
         SceneManager.LoadScene("AItest");
     }
 }
+
+
+
+
