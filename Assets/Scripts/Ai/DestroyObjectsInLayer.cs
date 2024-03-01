@@ -12,11 +12,11 @@ public class DestroyObjectsInLayer : MonoBehaviour
     void Start()
     {
 
-        string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
-        Debug.Log(selectedLanguage);
+        string selectedLanguageAI = PlayerPrefs.GetString("LearningLang", "English");
+        Debug.Log(selectedLanguageAI);
         // Assign the target language based on the selected language.
 
-        switch (selectedLanguage)
+        switch (selectedLanguageAI)
         {
             case "English":
                 DestroyFN();

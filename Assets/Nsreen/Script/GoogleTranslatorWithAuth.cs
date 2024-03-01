@@ -52,7 +52,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
             print("Mother" + selectedLanguage2);
             print("LeRN" + selectedLanguage);
             string targetLanguage;
-            switch (selectedLanguage)
+            switch (selectedLanguage2)
             {
                 case "English":
                     targetLanguage = "en";
@@ -73,7 +73,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
 
             string sourceLanguage;
-            switch (selectedLanguage2)
+            switch (selectedLanguage)
             {
                 case "English":
                     sourceLanguage = "en";
