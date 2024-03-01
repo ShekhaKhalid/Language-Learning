@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5613441, g: 0.768215, b: 0.99405944, a: 1}
+  m_IndirectSpecularColor: {r: 0.56189686, g: 0.7732006, b: 0.9925998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5314,6 +5314,8 @@ MonoBehaviour:
     - m_Text: French
       m_Image: {fileID: 0}
     - m_Text: Arabic
+      m_Image: {fileID: 0}
+    - m_Text: Korean
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
