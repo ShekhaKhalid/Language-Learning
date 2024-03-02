@@ -2951,6 +2951,7 @@ MonoBehaviour:
   MainMene: {fileID: 1740806280685047919}
   translete: {fileID: 2986430366242239854}
   instructions: {fileID: 6772665163068563858}
+  Keyboard: {fileID: 0}
 --- !u!1 &771018251113889876
 GameObject:
   m_ObjectHideFlags: 0
@@ -37046,6 +37047,9 @@ MonoBehaviour:
   translatedTextMeshPro: {fileID: 6970099057138970465}
   inputField: {fileID: 8375501685392369503}
   translateButton: {fileID: 6917586713294288761}
+  ArabicText: {fileID: 0}
+  KoreanText: {fileID: 0}
+  Keyboard: {fileID: 0}
 --- !u!1 &8419242886869324054
 GameObject:
   m_ObjectHideFlags: 0
@@ -38694,16 +38698,28 @@ MonoBehaviour:
     type: 3}
   characters:
   - characterGameObject: {fileID: 0}
-    characterName: Liam
+    characterName: William
     characterTextColor: {r: 1, g: 0, b: 0, a: 1}
   - characterGameObject: {fileID: 0}
-    characterName: Emma
+    characterName: Noura
     characterTextColor: {r: 1, g: 0, b: 0, a: 1}
   - characterGameObject: {fileID: 0}
-    characterName: Emma
+    characterName: Sanjana
     characterTextColor: {r: 1, g: 0, b: 0, a: 1}
   - characterGameObject: {fileID: 0}
-    characterName: Liam
+    characterName: William
+    characterTextColor: {r: 1, g: 0, b: 0, a: 1}
+  - characterGameObject: {fileID: 0}
+    characterName: Louis
+    characterTextColor: {r: 1, g: 0, b: 0, a: 1}
+  - characterGameObject: {fileID: 0}
+    characterName: Louis
+    characterTextColor: {r: 1, g: 0, b: 0, a: 1}
+  - characterGameObject: {fileID: 0}
+    characterName: Sanjana
+    characterTextColor: {r: 1, g: 0, b: 0, a: 1}
+  - characterGameObject: {fileID: 0}
+    characterName: Noura
     characterTextColor: {r: 1, g: 0, b: 0, a: 1}
   playerName: Player
   playerTextColor: {r: 0.16216493, g: 1, b: 0, a: 1}
