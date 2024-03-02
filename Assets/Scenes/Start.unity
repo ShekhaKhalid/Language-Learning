@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.56189686, g: 0.7732006, b: 0.9925998, a: 1}
+  m_IndirectSpecularColor: {r: 0.5619698, g: 0.7732308, b: 0.9925941, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 15252513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1624116870}
+        m_TargetAssemblyTypeName: StartUI, Assembly-CSharp
+        m_MethodName: HideUserInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &15252513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,7 +1144,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 31485905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058178221}
+        m_TargetAssemblyTypeName: Example, Assembly-CSharp
+        m_MethodName: sendEmail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1624116870}
+        m_TargetAssemblyTypeName: StartUI, Assembly-CSharp
+        m_MethodName: HideUserInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &31485905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3482,7 +3518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &770424712
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5060,7 +5096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1414504461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5569,6 +5605,8 @@ MonoBehaviour:
   audioSource: {fileID: 1624116869}
   welcome: {fileID: 8300000, guid: 19056995cba177c4cb5243e76c91cb0c, type: 3}
   music: {fileID: 8300000, guid: 8698718ea229ea74a8126b2778ea09b0, type: 3}
+  userInfoUI: {fileID: 770424711}
+  langInfoUI: {fileID: 1414504460}
 --- !u!4 &1624116871
 Transform:
   m_ObjectHideFlags: 0
@@ -6732,6 +6770,52 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &2058178220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058178222}
+  - component: {fileID: 2058178221}
+  m_Layer: 0
+  m_Name: Email-Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2058178221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058178220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3496fdeed534edb4496ae01c448c13ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UserName: {fileID: 1298529510}
+  UserEmail: {fileID: 931890730}
+--- !u!4 &2058178222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058178220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.119999886, y: 0.62700003, z: 5.1008186}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129055385
 GameObject:
   m_ObjectHideFlags: 0
@@ -7124,3 +7208,4 @@ SceneRoots:
   - {fileID: 1786811265}
   - {fileID: 1604003523}
   - {fileID: 1624116871}
+  - {fileID: 2058178222}
