@@ -291,43 +291,12 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &1089960102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6679339026332004061, guid: 17b97b06f2ad5e740941679ddb28a9a2,
+--- !u!4 &1012330329 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3243522448828126282, guid: 1a9063cd5d54836418c339fdf44d4adc,
     type: 3}
-  m_PrefabInstance: {fileID: 7886967047373014433}
+  m_PrefabInstance: {fileID: 1598803572}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1089960104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089960102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1598803572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,6 +421,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1598803572}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2076286614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6679339026332004061, guid: 17b97b06f2ad5e740941679ddb28a9a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7886967047373014433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2076286616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076286614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f5dc2e0cde331c347b8431074110704e, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &389365684582372529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -917,19 +923,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2960236583392919506, guid: d3ef738fbd590eb4e9ca848287b1166b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 389365684582372534}
+      addedObject: {fileID: 389365684582372543}
     - targetCorrespondingSourceObject: {fileID: 2960236583392919506, guid: d3ef738fbd590eb4e9ca848287b1166b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 389365684582372533}
+      addedObject: {fileID: 389365684582372542}
     - targetCorrespondingSourceObject: {fileID: 2960236583392919506, guid: d3ef738fbd590eb4e9ca848287b1166b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 389365684582372532}
+      addedObject: {fileID: 389365684582372541}
     - targetCorrespondingSourceObject: {fileID: 2960236583392919506, guid: d3ef738fbd590eb4e9ca848287b1166b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 389365684582372531}
+      addedObject: {fileID: 389365684582372540}
   m_SourcePrefab: {fileID: 100100000, guid: d3ef738fbd590eb4e9ca848287b1166b, type: 3}
 --- !u!1 &389365684582372530 stripped
 GameObject:
@@ -937,7 +943,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 389365684582372529}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &389365684582372531
+--- !u!114 &389365684582372540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -956,7 +962,7 @@ MonoBehaviour:
   maxBlinkDuration: 0.3
   minBlinkInterval: 2
   maxBlinkInterval: 3
---- !u!114 &389365684582372532
+--- !u!114 &389365684582372541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -975,7 +981,7 @@ MonoBehaviour:
   headLookAtWeight: 0.8
   eyesLookAtWeight: 1
   lookAway: 0
---- !u!114 &389365684582372533
+--- !u!114 &389365684582372542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -997,7 +1003,7 @@ MonoBehaviour:
   tongueBone: {fileID: 0}
   tongueBoneOffset: {x: -0.01, y: 0.015, z: 0}
   firstIndex: 0
---- !u!114 &389365684582372534
+--- !u!114 &389365684582372543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3861,8 +3867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bf09eafaaeed940ab9e5531a64790c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  trackingDistance: 10
+  targetObject: {fileID: 1012330329}
+  trackingDistance: 21
   turnSpeed: 5
   bodyLookAtWeight: 0.6
   headLookAtWeight: 0.8
@@ -5115,7 +5121,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6679339026332004061, guid: 17b97b06f2ad5e740941679ddb28a9a2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1089960104}
+      addedObject: {fileID: 2076286616}
   m_SourcePrefab: {fileID: 100100000, guid: 17b97b06f2ad5e740941679ddb28a9a2, type: 3}
 --- !u!1 &7886967047373014434 stripped
 GameObject:
