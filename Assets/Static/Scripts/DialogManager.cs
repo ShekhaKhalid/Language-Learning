@@ -4,19 +4,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
-//using Oculus.Voice;
-//using Meta.WitAi.Json;
+
+using Oculus.Voice;
+using Meta.WitAi.Json;
 using System.Text.RegularExpressions;
 using UnityEngine.Windows;
+using Convai.Scripts.Utils;
 
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueParent;
     [SerializeField] private TMP_Text dialogueText;
-    //[SerializeField] private Button option1Button;
-    //[SerializeField] private Button option2Button;
+    
 
     [SerializeField] private float typingSpeed = 0.05f;
     [SerializeField] private float turnSpeed = 2f;
@@ -36,16 +35,17 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField] private AudioClip correct;
     [SerializeField] private AudioClip wrong;
-    //public AppVoiceExperience voiceRecognizer;
-    public AudioSource audioSource; 
+    public AppVoiceExperience voiceRecognizer;
+    public AudioSource audioSource;
 
 
-
-    
-    private void Start()
+    private string currentAnswerOption;
+    [SerializeField] private Animator anim;
+    public ConvaiLipSync lips;
+   private void Start()
     {
         dialogueParent.SetActive(false);
-        //voiceRecognizer.VoiceEvents.OnPartialResponse.AddListener(HandleSpeak);
+        voiceRecognizer.VoiceEvents.OnPartialResponse.AddListener(HandleSpeak);
        
     }
     public void DialogueStart(List<dialogString> textToprint, Transform NPC)
@@ -56,7 +56,7 @@ public class DialogManager : MonoBehaviour
         dialogueList = textToprint;
         currentDialogueIndex = 0;
 
-        DisableButtons();
+        //DisableButtons();
 
         StartCoroutine(PrintDialogue());
     }
@@ -79,20 +79,25 @@ public class DialogManager : MonoBehaviour
         while(currentDialogueIndex < dialogueList.Count)
         {
             dialogString line = dialogueList[currentDialogueIndex];
-
+            print(currentDialogueIndex);
             line.startDialogueEvent?.Invoke();
 
             if (line.isQuestion)
             {
                 audioSource.PlayOneShot(line.clip);
                 yield return StartCoroutine(TypeText(line.text));
+                anim.SetBool("Talk", false);
+                lips.StopLipSync();
 
-                
 
                 option1Text.text = line.answerOption1;
+                currentAnswerOption = option1Text.text;
+    RemoveListenSelectedListener();
+
                 option1Listen.onClick.AddListener(() => HandleListenSelected(line.answerClip));
                 option1Speak.onClick.AddListener(() => StartRecord());
-                option1Stop.onClick.AddListener(() => StopRecording(line.answerOption1));
+                option1Stop.onClick.AddListener(() => StopRecording(currentAnswerOption));
+                print(currentDialogueIndex+"o"+line.answerClip);
                 print("!" + spoken);
                
                 yield return new WaitUntil(() => spoken);
@@ -106,7 +111,9 @@ public class DialogManager : MonoBehaviour
 
             line.endDialogueEvent?.Invoke();
             spoken = false;
+            currentDialogueIndex++;
         }
+        print("done11111");
         DialogueStop();
     }
 
@@ -114,7 +121,7 @@ public class DialogManager : MonoBehaviour
 
     private void HandleListenSelected(AudioClip audio)
     {
-        DisableButtons();
+        //DisableButtons();
 
         audioSource.PlayOneShot(audio);
     }
@@ -126,6 +133,8 @@ public class DialogManager : MonoBehaviour
         foreach (char letter in text.ToCharArray())
         {
             dialogueText.text += letter;
+            anim.SetBool("Talk", true);
+            lips.LipSyncCharacter();
             yield return new WaitForSeconds(typingSpeed);
         }
         if (!dialogueList[currentDialogueIndex].isQuestion)
@@ -134,7 +143,7 @@ public class DialogManager : MonoBehaviour
         }
         if (dialogueList[currentDialogueIndex].isEnd)
             DialogueStop();
-        currentDialogueIndex++;
+        //currentDialogueIndex++;
     }
 
     public void DialogueStop()
@@ -150,47 +159,54 @@ public class DialogManager : MonoBehaviour
     public void StartRecord()
     {
         
-        //voiceRecognizer.Activate();
+        voiceRecognizer.Activate();
     }
 
     public void StopRecording(string word)
     {
-        //voiceRecognizer.Deactivate();
+        voiceRecognizer.Deactivate();
         if (checkSpeak(spokenWord, word))
         {
             spoken = true;
+            audioSource.PlayOneShot(correct);
             print("!!" + spoken);
         }
+        else
+            audioSource.PlayOneShot(wrong);
     }
 
     private string spokenWord;
 
-    //public void HandleSpeak(WitResponseNode responseNode)
-    //{
-    //     spokenWord = responseNode["text"].Value.ToString().ToLower();
+    public void HandleSpeak(WitResponseNode responseNode)
+    {
+         spokenWord = responseNode["text"].Value.ToString().ToLower();
 
-    //    textSpoken.text = spokenWord;
+        textSpoken.text = spokenWord;
         
         
         
-    //}
+    }
 
     public bool checkSpeak(string wordSpoken, string word)
     {
         word = word.ToLower();
+        wordSpoken = wordSpoken.ToLower();  
         string pattern = "[^a-zA-Z0-9]";
 
         // Replace special characters with an empty string
-        string wordNoSpecial = Regex.Replace(word, pattern, "");
-        string wordSpokenNoSpecial = Regex.Replace(wordSpoken, pattern, "");
+        //string wordNoSpecial = Regex.Replace(word, pattern, "");
+        //string wordSpokenNoSpecial = Regex.Replace(wordSpoken, pattern, "");
 
-        print(wordNoSpecial + " 11" + wordSpokenNoSpecial);
-        if(wordSpokenNoSpecial == wordNoSpecial)
+        print(word + " 11" + wordSpoken);
+        if(word == wordSpoken)
         {
-            audioSource.PlayOneShot(correct);
             return true;
         }
-        audioSource.PlayOneShot(wrong);
+       
         return false;
+    }
+    private void RemoveListenSelectedListener()
+    {
+        option1Listen.onClick.RemoveAllListeners();
     }
 }
