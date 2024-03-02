@@ -39,7 +39,7 @@ public class SimpleEmailSender
                        "</style>" +
                        "</head>" +
                        "<body>" +
-                       "<h1>Thank you <strong>" + name + "</strong> for signing up!</h1>" +
+                       "<h1>Welcome <strong>" + name + "</strong> To Fluently!</h1>" +
                        "<p>We are thrilled to have you join the Fluently family as it grows. " +
                        "At Fluently, our AI-powered virtual reality experience combines language practice with virtual reality to " +
                        "ensure that you fully live the experience and don't miss a thing. Prepare to embark on an exciting journey with us," +
