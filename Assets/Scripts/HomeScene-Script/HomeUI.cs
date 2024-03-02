@@ -16,14 +16,14 @@ public class HomeUI : MonoBehaviour
     {
         home.SetActive(true);
         profile.SetActive(false);
-        settings.SetActive(false);
+        //settings.SetActive(false);
     }
 
     public void ShowProfilePage()
     {
         home.SetActive(false);
         profile.SetActive(true);
-        settings.SetActive(false);
+        //settings.SetActive(false);
     }
 
 
@@ -31,7 +31,7 @@ public class HomeUI : MonoBehaviour
     {
         home.SetActive(false);
         profile.SetActive(false);
-        settings.SetActive(true);
+        //settings.SetActive(true);
     }
 
     public void ShowPage1()
@@ -54,6 +54,6 @@ public class HomeUI : MonoBehaviour
 
     public void LoadCoffee()
     {
-        SceneManager.LoadScene("Coffee");
+        SceneManager.LoadScene("Coffe");
     }
 }
