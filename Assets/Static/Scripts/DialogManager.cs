@@ -9,7 +9,7 @@ using Oculus.Voice;
 using Meta.WitAi.Json;
 using System.Text.RegularExpressions;
 using UnityEngine.Windows;
-using Convai.Scripts.Utils;
+//using Convai.Scripts.Utils;
 
 public class DialogManager : MonoBehaviour
 {
@@ -41,7 +41,7 @@ public class DialogManager : MonoBehaviour
 
     private string currentAnswerOption;
     [SerializeField] private Animator anim;
-    public ConvaiLipSync lips;
+    //public ConvaiLipSync lips;
    private void Start()
     {
         dialogueParent.SetActive(false);
@@ -87,7 +87,7 @@ public class DialogManager : MonoBehaviour
                 audioSource.PlayOneShot(line.clip);
                 yield return StartCoroutine(TypeText(line.text));
                 anim.SetBool("Talk", false);
-                lips.StopLipSync();
+                //lips.StopLipSync();
 
 
                 option1Text.text = line.answerOption1;
@@ -134,7 +134,7 @@ public class DialogManager : MonoBehaviour
         {
             dialogueText.text += letter;
             anim.SetBool("Talk", true);
-            lips.LipSyncCharacter();
+            //lips.LipSyncCharacter();
             yield return new WaitForSeconds(typingSpeed);
         }
         if (!dialogueList[currentDialogueIndex].isQuestion)

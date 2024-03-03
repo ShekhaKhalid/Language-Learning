@@ -2555,7 +2555,6 @@ GameObject:
   - component: {fileID: 5146349702415597215}
   - component: {fileID: 2983269157600023386}
   - component: {fileID: 3737559286062396796}
-  - component: {fileID: 6401730358903251348}
   m_Layer: 0
   m_Name: Convai NPC parista
   m_TagString: Character
@@ -2728,25 +2727,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6401730358903251348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6341540673327097461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b38e4bc919e1f040ba78aea7472893e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: parista
-  characterID: dec77948-d671-11ee-9e6e-42010a7be009
-  sessionID: -1
-  isCharacterActive: 0
-  actionsHandler: {fileID: 0}
-  convaiLipSync: {fileID: 0}
-  isCharacterTalking: 0
 --- !u!1 &6467910222587206523
 GameObject:
   m_ObjectHideFlags: 0
