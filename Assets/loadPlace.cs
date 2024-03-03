@@ -13,4 +13,8 @@ public class loadPlace : MonoBehaviour
     {
         SceneManager.LoadScene("Airport");
     }
+    public void loadKaraoke()
+    {
+        SceneManager.LoadScene("Karaoke");
+    }
 }

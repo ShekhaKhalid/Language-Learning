@@ -5810,7 +5810,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1926445666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 781364319}
+        m_TargetAssemblyTypeName: loadPlace, Assembly-CSharp
+        m_MethodName: loadKaraoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1926445666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5831,7 +5843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a19ee58210ef29047a1a7f30dcb4063d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2c4c3775ab986b4aa57be6dfc33ccc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
