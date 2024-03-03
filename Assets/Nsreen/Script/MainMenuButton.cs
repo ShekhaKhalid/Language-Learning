@@ -9,6 +9,7 @@ public class MainMenuButton : MonoBehaviour
     public Canvas translete;
     public Canvas instructions;
     public Canvas Keyboard;
+    public Canvas sittings;
     private void Start()
     {
         MainMene.gameObject.SetActive(false);
@@ -55,5 +56,16 @@ public class MainMenuButton : MonoBehaviour
     {
         MainMene.gameObject.SetActive(true);
         instructions.gameObject.SetActive(false);
+    }
+
+    public void showSittings()
+    {
+        sittings.gameObject.SetActive(true);
+        MainMene.gameObject.SetActive(false);
+    }
+    public void hideSittings()
+    {
+        sittings.gameObject.SetActive(false);
+        MainMene.gameObject.SetActive(true);
     }
 }
