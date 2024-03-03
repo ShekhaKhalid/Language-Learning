@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using ArabicSupport;
 
 
 public class GoogleTranslatorWithAuth : MonoBehaviour
@@ -20,22 +21,98 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     public Button translateButton;
 
-    public TextMeshProUGUI ArabicText;
+    public Text ArabicText;
 
     public TextMeshProUGUI KoreanText;
+
+
+    /// Mother language Flag
+    [SerializeField]
+    private RawImage ar_motherFlag;
+    [SerializeField]
+    private RawImage fr_motherFlag;
+    [SerializeField]
+    private RawImage en_motherFlag;
+    [SerializeField]
+    private RawImage ko_motherFlag;
+
+    /// Learn language Flag
+    [SerializeField]
+    private RawImage fr_LearnFlag;
+    [SerializeField]
+    private RawImage en_LearnFlag;
+
+
+    string selectedLanguage;
+    string selectedLanguage2;
 
     public Canvas Keyboard;
     private void Start()
     {
-   
+
+        selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
+        selectedLanguage2 = PlayerPrefs.GetString("selectedLanguage2", "English");
+
         translateButton.onClick.AddListener(OnTranslateButtonClick);
 
+        flagsChang();
 
-   //     Arabic.gameObject.SetActive(false);
-    
 
     }
 
+    private void flagsChang()
+    {
+
+        string targetLanguage;
+        switch (selectedLanguage2)
+        {
+            case "English":
+                targetLanguage = "en";
+                en_motherFlag.gameObject.SetActive(true);
+                break;
+            case "French":
+                targetLanguage = "fr";
+
+                fr_motherFlag.gameObject.SetActive(true);
+                break;
+            case "Arabic":
+                targetLanguage = "ar";
+
+                ar_motherFlag.gameObject.SetActive(true);
+
+                break;
+            case "Korean":
+                targetLanguage = "ko";
+                ko_motherFlag.gameObject.SetActive(true);
+                break;
+            default:
+                targetLanguage = "en";
+                en_motherFlag.gameObject.SetActive(true);
+                break;
+        }
+
+
+        string sourceLanguage;
+        switch (selectedLanguage)
+        {
+            case "English":
+                sourceLanguage = "en";
+                en_LearnFlag.gameObject.SetActive(true);
+                break;
+            case "French":
+                sourceLanguage = "fr";
+                fr_LearnFlag.gameObject.SetActive(true);
+                break;
+            default:
+                sourceLanguage = "en";
+                en_LearnFlag.gameObject.SetActive(true);
+                break;
+        }
+
+
+        print("1" + targetLanguage);
+        print("2" + sourceLanguage);
+    }
 
     // This method is called when the translateButton is clicked.
     private void OnTranslateButtonClick()
@@ -46,8 +123,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         if (!string.IsNullOrEmpty(sourceText))
         {
             // Get the selected language from PlayerPrefs.
-            string selectedLanguage = PlayerPrefs.GetString("selectedLanguage", "English");
-            string selectedLanguage2 = PlayerPrefs.GetString("selectedLanguage2", "English");
+
             Debug.Log(selectedLanguage);
 
 
@@ -59,21 +135,27 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
                 case "English":
                     targetLanguage = "en";
                     translatedTextMeshPro.gameObject.SetActive(true);
+
                     break;
                 case "French":
                     targetLanguage = "fr";
                     translatedTextMeshPro.gameObject.SetActive(true);
+
                     break;
                 case "Arabic":
                     targetLanguage = "ar";
                     ArabicText.gameObject.SetActive(true);
+
+
                     break;
                 case "Korean":
                     targetLanguage = "ko";
                     KoreanText.gameObject.SetActive(true);
+
                     break;
                 default:
-                    targetLanguage = "en"; // Default to English if language is not recognized.
+                    targetLanguage = "en";
+                    en_motherFlag.gameObject.SetActive(true);
                     break;
             }
 
@@ -83,37 +165,37 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
             {
                 case "English":
                     sourceLanguage = "en";
+
                     break;
                 case "French":
                     sourceLanguage = "fr";
                     break;
                 default:
-                    sourceLanguage = "en"; // Default to English if language is not recognized.
+                    sourceLanguage = "en";
+
                     break;
             }
 
 
-            print("1"+targetLanguage);
-            print("2"+sourceLanguage);
-        
+            print("1" + targetLanguage);
+            print("2" + sourceLanguage);
+
 
 
             TranslateText(sourceLanguage, targetLanguage, sourceText, (success, translatedText) =>
             {
-              
-                if (success)
-                {       
-                    Debug.Log(translatedText);
-                  /*  translatedTextMeshPro.text = translatedText;*/
-                    /*   translatedTextMeshPro.GetComponent<ArabicFixerTMPRO>().fixedText = translatedText;*/
 
+                if (success)
+                {
+                    Debug.Log(translatedText);
                     switch (selectedLanguage2)
                     {
                         case "Korean":
-                            KoreanText.text = translatedText; 
+                            KoreanText.text = translatedText;
+
                             break;
                         case "Arabic":
-                            ArabicText.text = translatedText;
+                            ArabicText.text = ArabicFixer.Fix(translatedText);
                             break;
                         default:
                             translatedTextMeshPro.text = translatedText;
@@ -124,7 +206,7 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         }
 
 
-        Keyboard.gameObject.SetActive(false); 
+        Keyboard.gameObject.SetActive(false);
     }
 
 
@@ -187,6 +269,12 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
         callback.Invoke(true, translatedText);
     }
 }
+
+
+
+
+
+
 
 
 
