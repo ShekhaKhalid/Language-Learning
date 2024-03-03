@@ -10,22 +10,49 @@ public class DialogTrigger : MonoBehaviour
 
     private bool hasSpoken = false;
 
+    [SerializeField] private GameObject instructions;
+    [SerializeField] private GameObject UI;
+    [SerializeField] private float dialogDuration = 10f;
+    private bool done = false;
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player") && !hasSpoken)
         {
-            other.gameObject.GetComponent<DialogManager>().DialogueStart(dialogStrings, NPCTrasform);
-            hasSpoken = true;   
+            StartCoroutine(ShowDialogUI());
+           
+            
         }
     }
 
+    private IEnumerator ShowDialogUI()
+    {
+        instructions.SetActive(true);
+        UI.SetActive(false);
+        yield return new WaitForSeconds(dialogDuration);
+        UI.SetActive(true);
+        instructions.SetActive(false);
+        DialogManager dialogManager = FindObjectOfType<DialogManager>();
+        dialogManager.gameObject.GetComponent<DialogManager>().DialogueStart(dialogStrings, NPCTrasform);
+        hasSpoken = true;
 
+    }
+    private IEnumerator DialogCoroutine(GameObject playerObject)
+    {
+        DialogManager dialogManager = playerObject.GetComponent<DialogManager>();
+
+        dialogManager.DialogueStart(dialogStrings, NPCTrasform);
+        hasSpoken = true;
+
+        yield return StartCoroutine(ShowDialogUI());
+
+        // Continue with the remaining code
+    }
     //private void OnTriggerExit(Collider other)
     //{
     //    if (other.CompareTag("Player") )
     //    {
     //        other.gameObject.GetComponent<DialogManager>().DialogueStop();
-            
+
     //    }
     //}
 }
