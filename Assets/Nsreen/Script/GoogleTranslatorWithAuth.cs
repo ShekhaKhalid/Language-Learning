@@ -20,9 +20,11 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
 
     public Button translateButton;
 
-   /* public TextMeshProUGUI Arabic;*/
+    public TextMeshProUGUI ArabicText;
 
+    public TextMeshProUGUI KoreanText;
 
+    public Canvas Keyboard;
     private void Start()
     {
    
@@ -56,15 +58,19 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
             {
                 case "English":
                     targetLanguage = "en";
+                    translatedTextMeshPro.gameObject.SetActive(true);
                     break;
                 case "French":
                     targetLanguage = "fr";
+                    translatedTextMeshPro.gameObject.SetActive(true);
                     break;
                 case "Arabic":
                     targetLanguage = "ar";
+                    ArabicText.gameObject.SetActive(true);
                     break;
                 case "Korean":
                     targetLanguage = "ko";
+                    KoreanText.gameObject.SetActive(true);
                     break;
                 default:
                     targetLanguage = "en"; // Default to English if language is not recognized.
@@ -98,11 +104,27 @@ public class GoogleTranslatorWithAuth : MonoBehaviour
                 if (success)
                 {       
                     Debug.Log(translatedText);
-                    translatedTextMeshPro.text = translatedText;
+                  /*  translatedTextMeshPro.text = translatedText;*/
                     /*   translatedTextMeshPro.GetComponent<ArabicFixerTMPRO>().fixedText = translatedText;*/
+
+                    switch (selectedLanguage2)
+                    {
+                        case "Korean":
+                            KoreanText.text = translatedText; 
+                            break;
+                        case "Arabic":
+                            ArabicText.text = translatedText;
+                            break;
+                        default:
+                            translatedTextMeshPro.text = translatedText;
+                            break;
+                    }
                 }
             });
         }
+
+
+        Keyboard.gameObject.SetActive(false); 
     }
 
 

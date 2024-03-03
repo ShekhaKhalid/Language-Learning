@@ -10,6 +10,10 @@ public class StartUI : MonoBehaviour
     [SerializeField] private AudioClip welcome;
     [SerializeField] private AudioClip music;
 
+
+    [SerializeField] private GameObject userInfoUI;
+    [SerializeField] private GameObject langInfoUI;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -27,4 +31,9 @@ public class StartUI : MonoBehaviour
         audioSource.PlayOneShot(music); 
     }
 
+    public void HideUserInfo()
+    {
+        userInfoUI.SetActive(false);
+        langInfoUI.SetActive(true);
+    }
 }
