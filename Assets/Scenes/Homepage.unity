@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5619698, g: 0.7732308, b: 0.9925941, a: 1}
+  m_IndirectSpecularColor: {r: 0.56189686, g: 0.7732006, b: 0.9925998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -715,7 +715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &358115426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1645,15 +1645,15 @@ RectTransform:
   m_GameObject: {fileID: 499775826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6011906, y: 0.6011906, z: 0.6011906}
+  m_LocalScale: {x: 0.8569926, y: 0.8569926, z: 0.8569926}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 21451712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 291.13385, y: 147.47182}
-  m_SizeDelta: {x: 114, y: 53}
+  m_AnchoredPosition: {x: 334, y: 147.29}
+  m_SizeDelta: {x: 63.41, y: 50.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499775828
 MonoBehaviour:
@@ -2392,15 +2392,15 @@ RectTransform:
   m_GameObject: {fileID: 627970706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61109, y: 0.61109, z: 0.61109}
+  m_LocalScale: {x: 0.9315456, y: 0.9315456, z: 0.9315456}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 21451712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -316.63617, y: 153.43178}
-  m_SizeDelta: {x: 113.53, y: 53.27}
+  m_AnchoredPosition: {x: -323, y: 148}
+  m_SizeDelta: {x: 63, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627970708
 MonoBehaviour:
@@ -2650,7 +2650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.51, y: 3}
+  m_AnchoredPosition: {x: -59.51, y: -72}
   m_SizeDelta: {x: 61.56, y: 25.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796021638
@@ -2673,7 +2673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 221ab5116607e5f4eaf67754ff38fda8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: edf717f9ae6c4ec4cb4bcf875482589f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2719,14 +2719,14 @@ RectTransform:
   m_GameObject: {fileID: 813610585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0685, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1586318064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.03, y: 12}
+  m_AnchoredPosition: {x: -0.03, y: 15.3}
   m_SizeDelta: {x: 231.68, y: 90.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &813610587
@@ -2737,7 +2737,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813610585}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 349de5c57ddf4d74692a74674673297a, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 19a41eb0c92ebb944bad649bb90cc997, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -2761,7 +2761,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -2835,7 +2835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360.4062, y: -16.2082}
+  m_AnchoredPosition: {x: -360.4062, y: -37}
   m_SizeDelta: {x: 162.66, y: 94.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823939616
@@ -3045,14 +3045,14 @@ RectTransform:
   m_GameObject: {fileID: 1019697403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0338117, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1187856917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.75, y: 15.05}
+  m_AnchoredPosition: {x: 1.75, y: 15.1}
   m_SizeDelta: {x: 235.7, y: 91.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &1019697405
@@ -3063,7 +3063,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019697403}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b7045985ecc712c46abafe00be129b0e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 619b7111edaa9f24c8a882a84b13ce31, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -3087,7 +3087,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -3434,7 +3434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360.5938, y: -30.208195}
+  m_AnchoredPosition: {x: 360.5938, y: -35}
   m_SizeDelta: {x: 162, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244760946
@@ -3911,7 +3911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.51, y: -61}
+  m_AnchoredPosition: {x: -59.51, y: 1}
   m_SizeDelta: {x: 61.56, y: 25.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323466084
@@ -3934,7 +3934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: edf717f9ae6c4ec4cb4bcf875482589f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 221ab5116607e5f4eaf67754ff38fda8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5648,14 +5648,14 @@ RectTransform:
   m_GameObject: {fileID: 1920778506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99160916, y: 1.0345, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 358115426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.95, y: 11.38}
+  m_AnchoredPosition: {x: 0.1, y: 13.4}
   m_SizeDelta: {x: 235.68, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &1920778508
@@ -5665,12 +5665,12 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920778506}
-  m_Enabled: 0
-  m_VideoClip: {fileID: 0}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 8b5a99f34180dc448b8a996a860240ab, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 6c67d416b2e82a1448ab3b282aa177d4, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 526eaff19fd91da4cb9857ad79a8b8e1, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -5690,7 +5690,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -5714,7 +5714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f00362f39362e66428a9d8e870f49d4e, type: 3}
+  m_Texture: {fileID: 8400000, guid: 526eaff19fd91da4cb9857ad79a8b8e1, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5810,7 +5810,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1926445666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 781364319}
+        m_TargetAssemblyTypeName: loadPlace, Assembly-CSharp
+        m_MethodName: loadKaraoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1926445666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5831,7 +5843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a19ee58210ef29047a1a7f30dcb4063d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2c4c3775ab986b4aa57be6dfc33ccc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6144,7 +6156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ccb2a80af258854ab7d35fc3b72b7a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 280474298d73657419f79b55a6175096, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
